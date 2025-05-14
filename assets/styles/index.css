@@ -1,0 +1,1810 @@
+/*основыне стили по тэгам*/
+:root {
+    --primary-color: #c77e4e;
+    --secondary-color: #979797;
+    --text-color: #fff;
+    --text-color-secondary: #b6b6b6;
+    --background-color: #555555;
+}
+* {
+    font-family: 'Roboto', cursive;
+}
+body {
+    background-image: linear-gradient(#454545, #656565);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body a {
+    text-decoration: none;
+    color: white;
+}
+input {
+    padding: 10px 12px;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
+h2{
+     font-size: 40pt;
+     font-weight: 600;
+     margin: 70px 0px 50px 0px;
+ }
+
+/* шапка */
+header {
+    background: #555555;
+    height: 70px;
+}
+header * {
+    color: white;
+}
+header .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+header h1 {
+    margin-top: 3%;
+}
+header h1 a {
+    font-family: 'Rubik Bubbles';
+    text-decoration: none;
+    color: white;
+}
+header h1 a:hover {
+    color: #707070;
+}
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+header ul li {
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    float: left;
+    position: relative;
+}
+header ul li a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 22px;
+}
+header ul li a:hover {
+    background: #979797;
+    transition: 0.5s;
+    color: #707070;
+}
+header ul li ul {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 111;
+}
+header ul li:hover ul {
+    display: block;
+}
+header ul li ul li {
+    width: 100%;
+}
+header ul li ul li a {
+    padding: 10px;
+    background: #606060;
+    color: #ffffff;
+}
+
+/*бургер для мобильношо расширения*/
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+.burger span{
+    position: absolute;
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: white;
+}
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.burger::before{
+    top: 0;
+}
+.burger::after{
+    bottom: 0;
+}
+.burger.active span{
+    transform: scale(0);
+}
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+.open{
+    display: flex !important;
+}
+
+/*главная страница первый select*/
+.priv{
+    background-image: url(../../assets/media/fon.jpg);
+}
+.priv .in{
+    padding: 0px 0px 0px 300px;
+}
+.priv h2{
+    font-size: 60pt;
+    margin-bottom: 40px;
+}
+.priv button:not(.btn-zap){
+    background-color: #C77E4E;
+    border: none;
+    color: white;
+    width: 10%;
+    height: 10%;
+    font-size: 14pt;
+    border-radius: 120px;
+    padding: 0;
+}
+.priv .btn-zap{
+    background-color: #C77E4E;
+    border: none;
+    color: white;
+    height: 10%;
+    width: 30%;
+    padding: 20px 40px;
+    border-radius: 50px;
+    margin-right: 50px;
+}
+.priv .btn-zap:hover,button:hover{
+    background-color: #e9b796;
+}
+.priv p{
+    font-size: 14pt;
+    margin-bottom: 40px;
+}
+.priv .row{
+    width: 100.6%;
+    padding: 0;
+}
+.priv .col-xl-6:not(.in){
+    padding: 0;
+}
+.priv .col-xl-6 img{
+    float: right;
+    width: 100%;
+}
+
+/*главная страница второй select с услугами по породам*/
+.uslg h2{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.uslg .porod{
+    background-color: #979797;
+    font-size: 20pt;
+    padding: 20px 100px;
+    border-radius: 50px;
+    margin: 40px 0;
+}
+.uslg .porod a{
+    margin: 0 20px;
+}
+.uslg .porod a:hover{
+    transition: 0.5s;
+    background-color: #C77E4E;
+    border-radius: 50px;
+    padding: 15px 20px;
+}
+.eto{
+    background-color: #C77E4E;
+    border-radius: 50px;
+    padding: 15px 20px;
+}
+.uslg .carousel{
+    margin: 40px 0px 40px 320px;
+}
+.uslg .carousel .carousel-inner{
+    border-radius: 20px;
+}
+.uslg .carousel .carousel-inner img{
+    height: 400px;
+}
+.uslg .row{
+    width: 100%;
+    margin: 40px auto;
+}
+.uslg .accordion .accordion-item{
+    border-radius: 20px;
+    border: none;
+    background-color: #656565;
+    color: white;
+}
+.uslg .accordion .accordion-item button{
+    background-color: #979797;
+    border-radius: 20px;
+    color: white;
+    font-size: 20pt;
+    font-weight: 400;
+}
+.uslg .accordion .accordion-item pre{
+    font-family: 'Roboto', cursive;
+    font-weight: 400;
+    font-size: 16pt;
+    text-align: left;
+}
+.uslg .accordion .accordion-item p{
+    font-size: 10pt;
+    text-align: left;
+}
+.uslg .accordion-flush>.accordion-item>.accordion-header .accordion-button, 
+.accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed{
+    border-radius: 20px;
+}
+.uslg .rec h4{
+    padding: 20px;
+    background-color: #C77E4E;
+    border-radius: 20px;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+/*главная страница select с карточками мастеров*/
+.master .verh{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+}
+.master .verh button{
+    width: 300px;
+    height: 60px;
+    color: white;
+    background-color: #979797;
+    font-size: 16pt;
+    border: none;
+    border-radius: 50px;
+    align-items: left;
+    margin: 70px 0px 50px 180px;
+}
+.master .row .col-xl-3 .card{
+    background-color: #808080;
+    margin-bottom: 50px;
+}
+.master .row .col-xl-3 .card img{
+    border-radius: 200px;
+    width: 200px;
+    margin: 20px 45px;
+}
+.master .row .col-xl-3 .card img:hover{
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.master .row .col-xl-3 .card h5,
+.master .row .col-3 .card h5{
+    color: #b6b6b6;
+    font-weight: 400;
+    text-align: center;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+.master .row .col-xl-3 .card p,
+.master .row .col-3 .card p{
+    color: #b6b6b6;
+    text-align: center;
+    font-size: 12pt;
+    margin-bottom: 40px;
+}
+.master .row .col-xl-3 .card .btn{
+    background-color: #C77E4E;
+    color: white;
+    width: 100%;
+    
+    border-radius: 20px;
+    font-size: 16pt;
+}
+
+/*главная страница карточки мастеров*/
+.card-text1{
+    margin-bottom: 44px;
+}
+.card{
+    width: 40rem;
+}
+
+/*главная страница select с акциями*/
+.akc{
+    margin-top: 30px;
+}
+.akc .row .col-xl-6 .card{
+    background-color: #808080;
+    color: white;
+    margin-bottom: 30px;
+}
+.akc .row .col-xl-6 .card h5{
+    font-size: 32pt;
+}
+.akc .row .col-xl-6 .card p{
+    font-size: 14pt;
+    color: #b6b6b6;
+}
+.akc .row .col-xl-6 .card img{
+    width: 600px;
+    margin: 15px 20px;
+}
+.akc .row .col-xl-6 .card .btn{
+    background-color: #C77E4E;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 16pt;
+    height: 50px;
+    align-items: center;
+}
+
+/*главная страница select информации о компании*/
+.my{
+    background-image: url(../../assets/media/fon.jpg);
+}
+.my .ctn{
+    padding-top: 70px;
+}
+.my .row{
+    width: 100%;
+}
+.my .row .col-xl-2 img{
+    margin-top: 25px;
+    border-radius: 100px;
+    margin-left: 300px;
+}
+.my .row .col-xl-2 p{
+    background-color: #979797;
+    padding: 15px 30px;
+    border-radius: 15px;
+    width: 300px;
+    font-size: 16pt;
+    margin-left: 150px;
+}
+.my .row .col-xl img{
+    margin-top: 100px;
+    border-radius: 100px;
+    margin-left: 80px;
+}
+.my .row .col-xl p{
+    background-color: #979797;
+    margin-top: 100px;
+    padding: 15px 30px;
+    border-radius: 15px;
+    width: 300px;
+    font-size: 16pt;
+    margin-left: 200px;
+}
+.my  .row .col-xl-6 img{
+    border-radius: 100px;
+    margin-left: 700px;
+    margin-top: 200px;
+}
+.my  .row .col-xl-6 .o{
+    background-color: #979797;
+    padding: 25px 40px;
+    border-radius: 15px;
+    width: 500px;
+}
+.my .row .col-xl-6 .o p{
+    font-size: 30pt;
+    font-weight: 700;
+}
+.my .row .col-xl-6 .o button{
+    width: 100%;
+    background-color: #C77E4E;
+    border-radius: 20px;
+    font-size: 22pt;
+    border: none;
+    color: white;
+}
+
+/*главная страница select для записи*/
+.zap h2{
+    margin-top: 70px
+}
+.zap .row .col-xl-6 .card,
+.zap .row .col-6 .card{
+    background: rgba(73, 73, 73, 0.7);;
+    color: white;
+    border: 0;
+    backdrop-filter: blur(20px);
+    margin-bottom: 70px;
+    width: 38rem;
+}
+.zap .row .col-xl-6 .card .card-img-top,
+.zap .row .col-6 .card .card-img-top{
+    border-radius: 300px;
+    width: 250px;
+    margin: 15px 180px;
+}
+.zap .row .col-xl-6 .card h5,
+.zap .row .col-6 .card h5{
+    font-size: 32pt;
+}
+.zap .row .col-xl-6 .card .card-body .socials,
+.zap .row .col-6 .card .card-body .socials{
+   margin: 0 150px;
+}
+.zap .row .col-xl-6 .card .card-body .t,
+.zap .row .col-6 .card .card-body .t{
+    margin: 18px 90px;
+    width: 70%;
+    background-color: #C77E4E;
+    border-radius: 20px;
+    font-size: 18pt;
+    border: none;
+    color: white;
+}
+
+/*главная страница select c фото работ*/
+.strij{
+    margin: 150px auto 110px auto;
+}
+.strij .row{
+    margin-bottom: 40px;
+}
+
+.adress .cart{
+    margin: 15px 100px;
+}
+.adress .cart .cr{
+        width: 1080px;
+        height: 720px;
+}
+
+/* подвал */
+footer {
+    background: #555555;
+    color: #d3d3d3;
+    position: relative;
+}
+footer .logo-text{
+    font-family: 'Rubik Bubbles';
+}
+footer .footer-section {
+    padding: 22px;
+}
+
+footer h4,
+footer h3 {
+    color: white;
+}
+
+footer .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+footer .about .socials a {
+    border: 1px solid rgb(255, 255, 255);
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+footer .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .3s;
+}
+
+footer .links ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: all .3s;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer .links ul a:hover {
+    color: white;
+    margin-left: 15px;
+    transition: all .3s;
+}
+
+footer .contact-form .contact-input {
+    background: #858585;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+    width: 100%;
+}
+
+footer .contact-form .contact-input:focus {
+    background: #1a1a1a;
+}
+footer .contact-form{
+    margin-bottom: 80px;
+}
+footer .contact-form .contact-btn {
+    float: right;
+    font-size: 1.1em;
+    color: white;
+}
+
+footer .footer-bottom {
+    background: #535353;
+    color: #ffffff;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 10px;
+}
+
+/*странцы входа и регистрации*/
+.vh{
+    background-image: url(../../assets/media/fon.jpg);
+    max-width: 100%;
+}
+.regh{
+    font-size: 52pt;
+}
+.vhod{
+    width: 900px;
+    margin-bottom: 90px;
+}
+.vhod input{
+    height: 50px;
+}
+.vhod #button{
+    background-color: #C77E4E;
+    border: none;
+    font-size: 14pt;
+}
+.zareg {
+text-align: center;
+}
+
+/*страница профиля*/
+.section.prof {
+    width: 70%;
+    margin: 0 15%;
+}
+.prof .btn{
+    background-color: #C77E4E;
+    color: white;
+    border-radius: 15px;
+    width: 80%;
+    margin: 3% 10%;
+    font-size: 14pt;
+    height: 40px;
+    align-items: center;
+}
+.prof .button-row .btn {
+    background-color: #C77E4E;
+    width: 50%;
+    margin: 10px 0 0 0;
+    font-size: 12pt;
+}
+
+.prof .button-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.section.prof .rov .av img,
+.section.prof .row .av input[type="file"] {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.section.prof .info {
+    flex: 2;
+}
+.prof .row .info .name h3{
+    font-weight: bold;
+}
+.section.prof .pets {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 10px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.section.prof .card {
+    width: 200px;
+    text-align: center;
+    flex-shrink: 0; /* Запрещаем сжиматься */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #808080;
+    color: white;
+    margin-bottom: 30px;
+}
+.prof .cardpet{
+    width: 100%;
+    flex-shrink: 0; /* Запрещаем сжиматься */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    background-color: #808080;
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+.section.prof .av.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+.section.prof .avatar-upload {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.section.prof .avatar-upload:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+.section.prof .visually-hidden {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.section.prof .avatar-placeholder {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.section.prof .avatar-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.section.prof .card img,
+.section.prof .card input[type="file"] {
+    width: 100%;
+    border-radius: 5px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+/*страница мастеров*/
+.master .row .col-3 .card{
+    background-color: #808080;
+    margin-bottom: 50px;
+}
+.master .row .col-3 .card img{
+    border-radius: 200px;
+    width: 200px;
+    margin: 20px 45px;
+}
+.master .row .col-3 .card img:hover{
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.master .row .col-3 .card .btn{
+    background-color: #C77E4E;
+    color: white;
+    width: 100%;
+
+    border-radius: 20px;
+    font-size: 16pt;
+}
+
+/* Стили модального окна */
+#appointmentModal .modal-content {
+    border-radius: 15px;
+    border: none;
+    background-color: #4a4a4a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+#appointmentModal .modal-header {
+    background-color: #4a4a4a;
+    border-bottom: 1px solid #5a5a5a;
+    border-radius: 15px 15px 0 0;
+    padding: 1.5rem;
+}
+
+#appointmentModal .modal-title {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+#appointmentModal .btn-close {
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+#appointmentModal .btn-close:hover {
+    opacity: 1;
+}
+
+#appointmentModal .modal-body {
+    padding: 2rem;
+}
+/* Стили для сообщения о необходимости авторизации */
+.auth-message {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.auth-link {
+    color: #C77E4E !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    color: #a5683e !important;
+    text-decoration: underline;
+}
+
+.lead-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #c6c6c6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-lg {
+    background-color: #C77E4E;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    min-width: 220px;
+    color: white;
+    border-radius: 25px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+/* Стили формы */
+.appointment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+.form-section-title {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Стили для групп полей */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Стили для полей ввода */
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+/* Стили для подсказок */
+.form-hint {
+    font-size: 0.85rem;
+    color: #ff4a4a;
+    margin-top: 6px;
+}
+
+/* Стили для кнопок */
+.btn-add-pet {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-add-pet i {
+    margin-right: 8px;
+}
+
+.btn-add-pet:hover {
+    background-color: #3a7bc8;
+    transform: translateY(-1px);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #C77E4E;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .appointment-form {
+        padding: 15px;
+    }
+
+    .form-section-title {
+        font-size: 1.1rem;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 10px 12px;
+    }
+}
+
+/* Адаптивные стили */
+@media (max-width: 576px) {
+    #appointmentModal .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    #appointmentModal .modal-content {
+        border-radius: 10px;
+    }
+
+    #appointmentModal .modal-header,
+    #appointmentModal .modal-body {
+        padding: 1.25rem;
+    }
+
+    .auth-message {
+        font-size: 1rem;
+    }
+}
+
+/* Анимация появления */
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+/* Стили для валидации */
+.is-invalid {
+    border-color: #e74c3c !important;
+}
+
+.invalid-feedback {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+
+.cat .vid{
+    margin-bottom: 100px;
+}
+.cat .col-3 img:hover{
+    width: 101%;
+    transition: 0.5s;
+}
+.cat .col-3 img{
+    border-radius: 30px;
+}
+.cat .col-3 h3{
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 22pt;
+}
+.cat .col-3 p{
+    font-size: 12pt;
+    color: #b6b6b6;
+}
+.cat .cusl div{
+    border-radius: 30px;
+    padding: 20px 30px;
+    background-color: #979797;
+    font-size: 16pt;
+    margin-bottom: 30px;
+}
+.cat .cusl .i{
+    background-color: #C77E4E;
+}
+.cat .cusl div p{
+    margin: 0;
+}
+.cat .cusl div .t{
+    color: #707070;
+}
+.cat .grey{
+    background-color: #979797;
+    color: white;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+.cat .pod .ct{
+    font-size: 48pt;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.cat section{
+    margin: 70px auto;
+}
+.cat .pod p{
+    font-size: 14pt;
+}
+
+
+
+.dog .vid {
+    margin-bottom: 100px;
+}
+.dog .fl {
+    display: flex;
+    height: 60px;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.dog .fl form {
+    display: flex;
+    width: 100%;
+}
+
+.dog .fl form .form-control {
+    border-radius: 15px 0px 0px 15px;
+    flex-grow: 1;
+}
+
+.dog .kl form button {
+    padding: 20px;
+    background-color: #a7a7a7;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    cursor: pointer;
+}
+.dog .kl input {
+    background-color: #808080;
+    border: 0;
+    color: white;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.dog .kl input::placeholder {
+    color: white;
+    opacity: 1;
+}
+.dog .zap {
+    padding: 25px 0;
+}
+.dog .pr{
+    margin: 40px 0px;
+}
+.dog .pr h4{
+    margin-top: 20px;
+    color: #d4d4d4;
+}
+.dog .porod{
+    background-color: #979797;
+    font-size: 16pt;
+    padding: 20px;
+    border-radius: 50px;
+}
+.dog .porod a{
+    margin: 0 35px;
+}
+.dog .vidy{
+    width: 100%;
+    /* height: 350px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dog .vidy a{
+    width: 120px;
+}
+.dog .vidy a img{
+    border-radius: 15px;
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+}
+.dog .item_dog_title{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+}
+.dog #eto{
+    background-color: #C77E4E;
+    border-radius: 50px;
+    padding: 20px 25px;
+}
+.dog .cusl div {
+    border-radius: 30px;
+    padding: 20px 30px;
+    background-color: #979797;
+    font-size: 16pt;
+    margin-bottom: 30px;
+}
+.dog .cusl .i {
+    background-color: #C77E4E;
+}
+.dog .cusl div p {
+    margin: 0;
+}
+.dog .cusl div .t {
+    color: #707070;
+}
+.dog .grey {
+    background-color: #979797;
+    color: white;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+.dog .pod .ct {
+    font-size: 48pt;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.dog section {
+    margin: 70px auto;
+}
+.dog .pod p {
+    font-size: 14pt;
+}
+.dog .pr a:hover {
+    transition: 0.5s;
+    background-color: #C77E4E;
+    border-radius: 50px;
+    padding: 15px 20px;
+}
+
+
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .service-title-price {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .service-title {
+        white-space: normal;
+    }
+}
+
+@media(max-width: 425px){
+    header{
+        width: auto;
+    }
+    .nv{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: rgba(73, 73, 73, 0.7);
+        animation: burgerAnimation 0.4s;
+    }
+    .nv.active {
+        display: block;
+    }
+    header .nv ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    header .open .nav{
+        transform: translateX(100%);
+    }
+    .logo{
+        width: 10px;
+        height: 10px;
+        align-items: center;
+    }
+    .burger{
+        display: flex;
+    }
+    header h1{
+        margin-top: -12px;
+    }
+    header ul li ul li a {
+        background: 0;
+    }
+
+    .priv .in{
+        padding: 0px;
+        margin: 0 5px;
+        height: 400px;
+    }
+    .priv h2{
+        font-size: 32pt;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    h2{
+        font-size: 20pt;
+        font-weight: 500;
+        margin: 70px 0px 50px 0px;
+    }
+    header h1 a {
+        font-family: 'Rubik Bubbles';
+        text-decoration: none;
+        color: white;
+        font-size: 25pt;
+    }
+    #eto{
+        background-color: #C77E4E;
+        border-radius: 50px;
+        padding: 10px 7px;
+    }
+    .uslg .porod{
+        background-color: #979797;
+        font-size: 10pt;
+        padding: 10px 2px;
+        border-radius: 50px;
+        margin: 40px 0;
+    }
+    .uslg .porod a{
+        margin: 0 2px;
+    }
+    .uslg .carousel{
+        margin: 0 5px;
+    }
+    .col-4 {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .uslg .carousel .carousel-inner img{
+        height: 250px;
+    }
+    .card{
+        width: auto;
+    }
+    .akc .row .col-xl-6 .card img{
+        width: auto;
+        margin: 10px 10px;
+    }
+    .akc .row .col-xl-6 .card h5{
+        font-size: 20pt;
+    }
+    .akc .row .col-xl-6 .card p{
+        font-size: 13pt;
+        color: #b6b6b6;
+    }
+    .my .row .col-xl-2 img{
+        margin-top: 25px;
+        border-radius: 100px;
+        margin-left: 10px;
+    }
+    .my .row .col-xl-2 p{
+        background-color: #979797;
+        padding: 15px 30px;
+        border-radius: 15px;
+        width: auto;
+        font-size: 14pt;
+        margin: 0;
+    }
+    .my  .row .col-xl-6 img{
+        margin-left: 10px;
+        margin-top: 200px;
+        width: 150px;
+    }
+    .my  .row .col-xl-6 .o{
+        padding: 15px 15px;
+        border-radius: 15px;
+        width: auto;
+        margin-top: 25px;
+    }
+    .my .row .col-xl-6 .o p{
+        font-size: 14pt;
+        font-weight: 500;
+    }
+    .my .row .col-xl-6 .o button{
+        width: 100%;
+        font-size: 14pt;
+    }
+    .my .row .col-xl img{
+        margin-top: 100px;
+        margin-left: 0;
+        width: 140px;
+    }
+    .my .row .col-xl p{
+        margin-top: 100px;
+        padding: 10px 10px;
+        width: auto;
+        font-size: 14pt;
+        margin-left: 10px;
+    }
+
+
+    .zap .row .col-xl-6 .card{
+        margin-bottom: 70px;
+        width: auto;
+    }
+    .zap .row .col-xl-6 .card .card-img-top{
+        width: 200px;
+        margin: 10px 95px;
+    }
+    .zap .row .col-xl-6 .card h5{
+        font-size: 32pt;
+    }
+    .zap .row .col-xl-6 .card .card-body .socials{
+        margin: 0 50px;
+        display: flex;
+        align-items: center;
+    }
+    .zap .row .col-xl-6 .card .card-body .t{
+        margin: 18px 50px;
+    }
+
+
+    .priv .col-xl-6 img{
+        float: right;
+        width: 100%;
+        display: none;
+    }
+    .priv p {
+        font-size: 13pt;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .priv .btn-zap{
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 0 60px;
+    }
+
+    .strij .row .col-12 img {
+        width: 350px;
+        margin: 10px 20px;
+    }
+    .strij .row {
+        margin-bottom: 0px;
+    }
+
+    .master h2{
+        font-size: 20pt;
+        font-weight: 500;
+        margin: 0px 0px 20px 0px;
+    }
+    .master .verh {
+        grid-template-columns: 1fr;
+    }
+    .master .verh button {
+        margin: 0px 20px 50px 20px;
+    }
+    .master .row .col-xl-3 .card{
+        margin: 0 50px 30px 50px;
+    }
+
+    .adress .cart{
+        margin: 15px 20px;
+    }
+    .adress .cart .cr{
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    header{
+        width: auto;
+    }
+    .nv{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        font-size: 18pt;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 60px 80px;
+        background-color: rgba(73, 73, 73, 0.7);
+        animation: burgerAnimation 0.4s;
+    }
+    .nv.active {
+        display: block;
+    }
+    header .nv ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    header .open .nav{
+        transform: translateX(100%);
+    }
+    .logo{
+        width: 10px;
+        height: 10px;
+        align-items: center;
+    }
+    .burger{
+        display: flex;
+    }
+    header h1{
+        margin-top: -12px;
+    }
+    header ul li ul li a {
+        background: 0;
+    }
+
+
+    .priv .col-xl-6 img{
+        float: right;
+        width: 100%;
+        display: none;
+    }
+    .priv p {
+        font-size: 14pt;
+        margin-bottom: 20px;
+        margin-left: 80px;
+    }
+    .priv button:not(.btn-zap) {
+        width: 6%;
+    }
+    .priv .btn-zap{
+        padding: 15px 40px;
+        border-radius: 50px;
+        margin: 0 80px;
+    }
+    .priv .in{
+        padding: 0px;
+        margin: 0 5px;
+        height: 500px;
+    }
+    .priv h2{
+        font-size: 44pt;
+        margin-bottom: 20px;
+        margin-left: 80px;
+    }
+
+
+    #eto{
+        background-color: #C77E4E;
+        border-radius: 50px;
+        padding: 10px 7px;
+    }
+    .uslg .porod{
+        background-color: #979797;
+        font-size: 14pt;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 40px 0;
+    }
+    .uslg .porod a{
+        margin: 0 10px;
+    }
+    .uslg .carousel{
+        margin: 0;
+    }
+    .col-4 {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .uslg .carousel .carousel-inner img{
+        height: auto;
+    }
+
+    .akc .row .col-xl-6 .card{
+        margin: 0 30px;
+        margin-bottom: 15px;
+    }
+    .akc .row .col-xl-6 .card img{
+        width: auto;
+        margin: 10px 10px;
+    }
+    .akc .row .col-xl-6 .card h5{
+        font-size: 20pt;
+    }
+    .akc .row .col-xl-6 .card p{
+        font-size: 13pt;
+        color: #b6b6b6;
+    }
+
+    h2{
+        font-size: 30pt;
+        font-weight: 500;
+        margin: 70px 0px 50px 0px;
+    }
+
+
+    .my .row .col-xl-2 img{
+        margin-top: 25px;
+        border-radius: 100px;
+        margin-left: 30px;
+    }
+    .my .row .col-xl-2 p{
+        background-color: #979797;
+        padding: 15px 30px;
+        border-radius: 15px;
+        width: auto;
+        font-size: 14pt;
+        margin: 0;
+    }
+    .my  .row .col-xl-6 img{
+        margin-left: 150px;
+        margin-top: 200px;
+        width: 150px;
+    }
+    .my  .row .col-xl-6 .o{
+        padding: 20px 25px;
+        border-radius: 15px;
+        width:350px;
+        margin-top: 25px;
+    }
+    .my .row .col-xl-6 .o p{
+        font-size: 18pt;
+        font-weight: 500;
+    }
+    .my .row .col-xl-6 .o button{
+        width: 100%;
+        font-size: 16pt;
+    }
+    .my .row .col-xl img{
+        margin-top: 100px;
+        margin-left: 0;
+        width: 140px;
+    }
+    .my .row .col-xl p{
+        margin-top: 100px;
+        padding: 10px 10px;
+        width: auto;
+        font-size: 14pt;
+        margin-left: 220px;
+    }
+
+    .zap .row .col-xl-6 .card{
+        margin-bottom: 70px;
+        width: auto;
+        margin: 0 80px 70px 80px;
+    }
+    .zap .row .col-xl-6 .card .card-img-top{
+        width: 200px;
+        margin: 10px 180px;
+    }
+    .zap .row .col-xl-6 .card h5{
+        font-size: 32pt;
+    }
+    .zap .row .col-xl-6 .card .card-body .socials{
+        margin: 0 130px;
+        display: flex;
+        align-items: center;
+    }
+    .zap .row .col-xl-6 .card .card-body .t{
+        margin: 18px 80px;
+    }
+
+    .strij .row .col-12 img {
+        width: 500px;
+        margin: 10px 100px;
+    }
+    .strij .row {
+        margin-bottom: 0px;
+    }
+
+    .master h2{
+        font-size: 20pt;
+        font-weight: 500;
+        margin: 0px 0px 20px 0px;
+    }
+    .master .verh {
+        grid-template-columns: 1fr;
+    }
+    .master .verh button {
+        margin: 0px 20px 50px 20px;
+    }
+    .master .row .col-xl-3 .card{
+        margin: 0 30px 30px 30px;
+    }
+}
+@media (min-width: 757px) and (max-width: 1024px){
+    header ul li a {
+        display: block;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+
+    .priv .col-xl-6 img{
+        float: right;
+        width: 100%;
+        display: none;
+    }
+    .priv p {
+        font-size: 14pt;
+        margin-bottom: 20px;
+        margin-left: 220px;
+    }
+    .priv button:not(.btn-zap) {
+        width: 6%;
+    }
+    .priv .btn-zap{
+        padding: 15px 40px;
+        border-radius: 50px;
+        margin: 0px 60px 0px 220px;
+    }
+    .priv .in{
+        padding: 0px;
+        margin: 0 5px;
+        height: 500px;
+    }
+    .priv h2{
+        font-size: 44pt;
+        margin-bottom: 20px;
+        margin-left: 220px;
+    }
+    
+    #eto{
+        background-color: #C77E4E;
+        border-radius: 50px;
+        padding: 20px 15px;
+    }
+    .uslg .porod{
+        background-color: #979797;
+        font-size: 16pt;
+        padding: 20px 25px;
+        border-radius: 50px;
+        margin: 40px 0;
+    }
+    .uslg .porod a{
+        margin: 0 10px;
+    }
+    .uslg .carousel{
+        margin: 0;
+    }
+    .col-4 {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .uslg .carousel .carousel-inner img{
+        height: auto;
+    }
+
+    .akc .row .col-xl-6 .card{
+        margin: 0 120px;
+        margin-bottom: 15px;
+    }
+    .akc .row .col-xl-6 .card img{
+        width: auto;
+        margin: 10px 10px;
+    }
+    .akc .row .col-xl-6 .card h5{
+        font-size: 20pt;
+    }
+    .akc .row .col-xl-6 .card p{
+        font-size: 13pt;
+        color: #b6b6b6;
+    }
+
+    h2{
+        font-size: 36pt;
+        font-weight: 500;
+        margin: 70px 0px 50px 0px;
+    }
+
+
+    .my .row .col-xl-2 img{
+        margin-top: 25px;
+        border-radius: 100px;
+        margin-left: 30px;
+    }
+    .my .row .col-xl-2 p{
+        background-color: #979797;
+        padding: 15px 30px;
+        border-radius: 15px;
+        width: auto;
+        font-size: 14pt;
+        margin: 0;
+    }
+    .my  .row .col-xl-6 img{
+        margin-left: 250px;
+        margin-top: 200px;
+        width: 150px;
+    }
+    .my  .row .col-xl-6 .o{
+        padding: 20px 25px;
+        border-radius: 15px;
+        width:350px;
+        margin-top: 25px;
+    }
+    .my .row .col-xl-6 .o p{
+        font-size: 18pt;
+        font-weight: 500;
+    }
+    .my .row .col-xl-6 .o button{
+        width: 100%;
+        font-size: 16pt;
+    }
+    .my .row .col-xl img{
+        margin-top: 100px;
+        margin-left: 40px;
+        width: 140px;
+    }
+    .my .row .col-xl p{
+        margin-top: 100px;
+        padding: 10px 10px;
+        width: auto;
+        font-size: 14pt;
+        margin-left: 350px;
+    }
+
+    .zap .row .col-xl-6 .card{
+        margin-bottom: 70px;
+        width: auto;
+        margin: 0 80px 70px 80px;
+    }
+    .zap .row .col-xl-6 .card .card-img-top{
+        width: 350px;
+        margin: 10px 200px;
+    }
+    .zap .row .col-xl-6 .card h5{
+        font-size: 32pt;
+    }
+    .zap .row .col-xl-6 .card .card-body .socials{
+        margin: 0 220px;
+        display: flex;
+        align-items: center;
+    }
+    .zap .row .col-xl-6 .card .card-body .t{
+        margin: 18px 100px;
+    }
+
+    .strij .row .col-12 img {
+        width: 550px;
+        margin: 10px 200px;
+    }
+    .strij .row {
+        margin-bottom: 0px;
+    }
+
+    .master h2{
+        font-size: 20pt;
+        font-weight: 500;
+        margin: 0px 0px 20px 0px;
+    }
+    .master .verh {
+        grid-template-columns: 1fr;
+    }
+    .master .verh button {
+        margin: 0px 20px 50px 20px;
+    }
+    .master .row .col-xl-3 .card{
+        margin: 0 80px 30px 80px;
+    }
+}
